@@ -2,8 +2,11 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const Task = require("./models/tasks");
-require('dotenv').config();
-
+require('dotenv').config(
+  {
+    path:'../.env'
+  }
+);
 const app = express();
 app.use(cors());       
 app.use(express.json());

@@ -12,6 +12,17 @@ function AddTask({ addTask }) {
     if (e.key === "Enter") handleAdd();
   };
 
+  const buttonStyle = {
+          padding: "8px 16px",
+          marginLeft: "10px",
+          fontSize: "16px",
+          cursor: text.trim() ? "pointer" : "not-allowed",
+          backgroundColor: "#4CAF50",
+          color: "white",
+          border: "none",
+          borderRadius: "4px",
+        };
+
   return (
     <div style={{ display: "flex", marginBottom: "10px" }}>
       <input
@@ -24,16 +35,7 @@ function AddTask({ addTask }) {
       <button
         onClick={handleAdd}
         disabled={!text.trim()}
-        style={{
-          padding: "8px 16px",
-          marginLeft: "10px",
-          fontSize: "16px",
-          cursor: text.trim() ? "pointer" : "not-allowed",
-          backgroundColor: "#4CAF50",
-          color: "white",
-          border: "none",
-          borderRadius: "4px",
-        }}
+        style={buttonStyle}
       >
         Add
       </button>

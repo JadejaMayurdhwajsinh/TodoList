@@ -7,10 +7,9 @@ function App() {
   const API_URL = "http://localhost:5000/tasks";
 
   useEffect(() => {
-    const saved = localStorage.getItem("tasks");
-    if (saved) setTasks(JSON.parse(saved));
-    else fetchTasks();
+  fetchTasks();
   }, []);
+
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -21,6 +20,7 @@ function App() {
       const res = await fetch(API_URL);
       const data = await res.json();
       setTasks(data);
+      localStorage.setItem("tasks",JSON.stringify(data));
     } catch (err) {
       console.error(err);
     }
