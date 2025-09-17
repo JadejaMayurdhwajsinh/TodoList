@@ -42,4 +42,5 @@ app.delete("/tasks/:id", async (req, res) => {
   res.json({ message: "Task deleted" });
 });
 
-app.listen(process.env.PORT, () => console.log("🚀 Backend running on http://localhost:5000"));
+app.listen(process.env.PORT, () => 
+  console.log(`🚀 Backend running on http://localhost:${process.env.PORT}`));
