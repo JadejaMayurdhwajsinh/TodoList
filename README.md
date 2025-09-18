@@ -1,52 +1,45 @@
-# TodoList
+# 📌 TodoList  
 
-A full-stack TODO list application with separate frontend and backend.  
-Allows users to create, read, update, and delete tasks (to-dos).
-
----
-
-## Table of Contents
-
-- [Features](#features)  
-- [Technologies Used](#technologies-used)  
-- [Project Structure](#project-structure)  
-- [Setup & Installation](#setup--installation)  
-- [Usage](#usage)  
-- [API Endpoints](#api-endpoints)  
-- [Contributing](#contributing)  
-- [License](#license)  
+A **full-stack TODO list application** built with the **MERN stack** (MongoDB, Express.js, React.js, Node.js).  
+It allows users to create, read, update, and delete tasks in a simple and responsive interface.  
 
 ---
 
-## Features
+## ✨ Features  
 
 - Add new tasks  
 - View all tasks  
-- Edit existing tasks  
+- Edit/update tasks  
 - Delete tasks  
-- Clear UI with separate frontend and backend  
+- Persistent storage with MongoDB  
+- Separate **frontend (React)** and **backend (Node/Express)**  
+- Clean and responsive UI  
 
 ---
 
-## Technologies Used
+## 🛠️ Tech Stack  
 
-| Layer     | Technology / Framework      |
-|------------|-----------------------------|
-| Frontend   | JavaScript, HTML, CSS (or specify framework/library if used) |
-| Backend    | Node.js (or whatever backend you have), Express.js etc. |
-| Database   | (if any — e.g. MongoDB, PostgreSQL, etc.) |
-| Version Control | Git & GitHub         |
+- **Frontend**: React.js, JavaScript, HTML, CSS  
+- **Backend**: Node.js, Express.js  
+- **Database**: MongoDB with Mongoose  
+- **Version Control**: Git & GitHub  
 
 ---
 
-## Project Structure
+## 📂 Project Structure  
 
 ```text
 TodoList/
-├── frontend/             # Frontend code
-│   ├── …                 # HTML, CSS, JS files etc.
-├── backend/              # Backend server code
-│   ├── …                 # API routes, controllers etc.
+├── frontend/             # React frontend (UI)
+│   ├── public/           # Static files
+│   ├── src/              # React components, hooks, pages
+│   └── package.json
+│
+├── backend/              # Node + Express backend
+│   ├── models/           # Mongoose schemas
+│   ├── server.js         # Entry point
+│   └── package.json
+│
 ├── .gitignore
-├── README.md             # Project overview and instructions
-└── …                     # Other configuration files
+├── README.md
+└── ...
